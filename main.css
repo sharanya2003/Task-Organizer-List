@@ -35,10 +35,23 @@ header{
 }
 
 header h1{
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 300;
-    color: var(--gray);
+    font-family: 'Rubik Moonrocks', cursive;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     margin-bottom: 1rem;
+}
+
+header h4{
+    font-size: 1.1rem;
+    font-weight:bolder;
+    font-family: 'Rubik Moonrocks', cursive;
+    color: var(--darkest);
+    padding-bottom: 2%;
 }
 
 #new-task-form{
@@ -103,9 +116,14 @@ main{
 }
 
 .task-list h2{
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--gray);
+    font-size: 2rem;
+    font-weight: 200;
+    font-family: 'Rubik Moonrocks', cursive;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     margin-bottom: 1rem;
 }
 
@@ -113,17 +131,24 @@ main{
 #tasks .task{
     display: flex;
     justify-content: space-between;
-    background-color: var(--darkest);
+    background-color: #1c1d1f;
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
 }
 
 
+#tasks .task .content{
+    flex: 1 1 0%;
+    /* lets you see more chars when task added */
+}
+
+
 #tasks .task .content .text{
 
-    color: var(--light);
+    color: bisque;
     font-size: 1.125rem;
+    font-weight:300;
     width: 100%;
     display: block;
     transition: 0.4s;
@@ -149,10 +174,25 @@ main{
 
 .task .actions button:hover{
     opacity: 0.8;
-    color: var(--pink);
 }
 
 .task .actions button:active{
     opacity: 0.6;
-    color: var(--purple);
+    /* color: var(--purple); */
+}
+
+.task .actions .edit{
+    background-image: linear-gradient(to right, #11a307, #11a307,#3feff2);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete{
+
+    background-image: linear-gradient(to right, #ed0e21, #f0985d);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
